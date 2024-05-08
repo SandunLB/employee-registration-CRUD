@@ -1,0 +1,135 @@
+body {
+	font-family: 
+        Calibri, Candara, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); 
+    border-radius:10px;
+}
+
+th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+}
+
+th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+}
+
+tr:hover {
+      background-color: #6bb6ff;
+}
+
+.button-container {
+      display: flex;
+      justify-content: space-around;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button[type="submit"] {
+    background-color: #dc3545;
+}
+
+.button-container button[type="submit"]:hover {
+    background-color: #bd2130;
+}
+
+
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.form-container {
+    max-width: 300px;
+    text-align: center;
+}
+
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+ .form-container button {
+    background-color: #007bff;
+    color: white;
+    margin: 5px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+ .form-container button:hover {
+            background-color: #0056b3;
+  }
