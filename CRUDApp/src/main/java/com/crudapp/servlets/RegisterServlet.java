@@ -28,11 +28,11 @@ public class RegisterServlet extends HttpServlet {
         }
 
         try {
-            // Connect to MySQL database
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud_db", "root", "");
 
-            // Insert new admin record
+     
             String sql = "INSERT INTO admins (username, idNumber, email, password) VALUES (?, ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
@@ -41,10 +41,10 @@ public class RegisterServlet extends HttpServlet {
             pstmt.setString(4, password);
             pstmt.executeUpdate();
 
-            // Close database connection
+      
             conn.close();
 
-            // Redirect to login.jsp after successful registration
+      
             response.sendRedirect("login.jsp");
         } catch (Exception e) {
             e.printStackTrace();

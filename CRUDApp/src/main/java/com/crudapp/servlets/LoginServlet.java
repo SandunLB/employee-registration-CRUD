@@ -22,11 +22,11 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            // Connect to MySQL database
+     
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud_db", "root", "");
 
-            // Check admin credentials
+       
             String sql = "SELECT * FROM admins WHERE username=? AND password=?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
@@ -34,18 +34,18 @@ public class LoginServlet extends HttpServlet {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                // Admin authenticated, create session
+            
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
 
-                // Redirect to dashboard or any other page
+            
                 response.sendRedirect("index.jsp");
             } else {
-                // Invalid credentials, redirect back to login page
+             
                 response.sendRedirect("login.jsp?error=invalid");
             }
 
-            // Close database connection
+         
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();

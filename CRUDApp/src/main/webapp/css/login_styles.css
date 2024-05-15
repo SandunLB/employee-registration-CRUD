@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom, #87CEEB, #1E90FF);
@@ -20,17 +20,17 @@ body {
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
     width: 350px;
     text-align: center;
-    backdrop-filter: blur(10px); /* Blur effect */
+    backdrop-filter: blur(10px);
 }
 
 .form-container h2 {
-    color: #007BFF; /* Blue text color */
+    color: #007BFF; 
     margin-bottom: 20px;
 }
 
@@ -43,8 +43,8 @@ body {
     display: block;
     border: none;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -52,12 +52,11 @@ body {
 .form-container input[type="email"]:focus,
 .form-container input[type="password"]:focus {
     outline: none;
-    background-color: #f2f2f2; /* Light gray background on focus */
+    background-color: #f2f2f2;
 }
 
 .form-container button {
-    background-color: #007BFF; /* Blue button color */
-    color: white;
+    background-color: #007BFF;
     padding: 14px 0;
     margin-top: 20px;
     border: none;
@@ -68,30 +67,30 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s;
 }
 
 .form-container button:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+    background-color: #0056b3; 
 }
 
 .form-container p {
     margin-top: 15px;
     font-size: 14px;
-    color: #555; /* Text color */
+    color: #555; 
 }
 
 .form-container a {
-    color: #0056b3; /* Blue link color */
+    color: #0056b3;
     text-decoration: none;
-    transition: color 0.3s; /* Smooth transition */
+    transition: color 0.3s;
 }
 
 .form-container a:hover {
-    color: #003366; /* Darker blue color on hover */
+    color: #003366; 
 }
 
-/* Animation for form elements */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;

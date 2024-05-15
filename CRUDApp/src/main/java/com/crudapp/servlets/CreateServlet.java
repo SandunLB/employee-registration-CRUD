@@ -22,11 +22,11 @@ public class CreateServlet extends HttpServlet {
         double salary = Double.parseDouble(request.getParameter("salary"));
 
         try {
-            // Connect to MySQL database
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud_db", "root", "");
 
-            // Insert new employee record
+            
             String sql = "INSERT INTO employees (name, email, position, salary) VALUES (?, ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, name);
@@ -35,10 +35,10 @@ public class CreateServlet extends HttpServlet {
             pstmt.setDouble(4, salary);
             pstmt.executeUpdate();
 
-            // Close database connection
+         
             conn.close();
 
-            // Redirect to read.jsp after successful creation
+          
             response.sendRedirect("read.jsp");
         } catch (Exception e) {
             e.printStackTrace();

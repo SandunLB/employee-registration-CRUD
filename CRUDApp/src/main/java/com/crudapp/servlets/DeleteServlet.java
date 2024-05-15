@@ -19,20 +19,20 @@ public class DeleteServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
 
         try {
-            // Connect to MySQL database
+      
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud_db", "root", "");
 
-            // Delete employee record
+          
             String sql = "DELETE FROM employees WHERE id=?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
 
-            // Close database connection
+          
             conn.close();
 
-            // Redirect to read.jsp after successful deletion
+         
             response.sendRedirect("read.jsp");
         } catch (Exception e) {
             e.printStackTrace();
